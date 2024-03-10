@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VKİ Hesap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" href="h.png" type="image/x-icon">
+
+ 
+</head>
+<body>
+    <div class="container">
+        <h1>Merhaba! <i class="fas fa-user"></i></h1>
+        <p>Vücut Kitle Endeksinizi Öğrenmek İçin Bilgilerinizi Girin</p>
+        <form id="bmiForm">
+            <div class="form-group">
+                <label for="boy"><i class="fas fa-ruler"></i> Boy:</label>
+                <input type="number" class="form-control" id="boy" placeholder="Boy (cm)" required>
+            </div>
+            <div class="form-group">
+                <label for="yas"><i class="fas fa-birthday-cake"></i> Yaş:</label>
+                <input type="number" class="form-control" id="yas" placeholder="Yaş" required>
+            </div>
+            <div class="form-group">
+                <label for="kilo"><i class="fas fa-weight"></i> Kilo:</label>
+                <input type="number" class="form-control" id="kilo" placeholder="Kilo (kg)" required>
+            </div>
+            <div class="form-group">
+                <label for="cinsiyet"><i class="fas fa-venus-mars"></i> Cinsiyet:</label>
+                <select class="form-control" id="cinsiyet" required>
+                    <option value="">Cinsiyet Seçin</option>
+                    <option value="erkek">Erkek</option>
+                    <option value="kadin">Kadın</option>
+                </select>
+            </div>
+            <button type="button" class="btn btn-primary" id="calculateButton"><i class="fas fa-calculator"></i> Hesapla</button>
+        </form>
+        <div class="result">
+            <div id="result"></div>
+            <!-- Result will be displayed here -->
+        </div>
+        
+    </div>
+    <!-- Bootstrap JS ve jQuery gereksinimlerini eklemeyi unutmayın -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- JavaScript dosyasını dahil et -->
+    <script src="app.js"></script>
+</body>
+</html>

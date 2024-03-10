@@ -1,0 +1,97 @@
+/* Genel stiller */
+body {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+h1 {
+    opacity: 0;
+    animation: slideDown 1s ease forwards, fadeIn 1s ease forwards; /* slideDown ve fadeIn animasyonlarını birlikte uygula */
+    font-size: 5em;
+}
+
+/* Animasyonlar */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+p {
+    opacity: 0; /* p etiketini başlangıçta görünmez yap */
+    animation: fadeIn 1s ease 0.5s forwards; /* fadeIn animasyonunu uygula, 0.5 saniye sonra başlat */
+}
+
+/* Form stilleri */
+.form-group {
+    opacity: 0;
+    animation: fadeIn 0.5s ease 1s forwards;
+    max-width: 300px;
+    margin: 50px auto 0;
+}
+
+/* Buton stilleri */
+.btn,
+.btn-primary {
+    opacity: 0;
+    animation: fadeIn 0.5s ease 1s forwards;
+    font-size: 1.5em;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #007bff;
+}
+
+/* Sonuç stil */
+.result {
+    font-size: 1.2em;
+}
+
+.result p i {
+    font-size: 1.2em;
+}
+
+.result p i.fa-exclamation-circle {
+    color: red;
+}
+
+.result p i.fa-check-circle {
+    color: rgb(51, 173, 51);
+}
+
+.result p i.fa-exclamation-triangle {
+    color: orange;
+}
+
+.result p i.fa-question-circle {
+    color: blue;
+}
